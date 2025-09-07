@@ -50,13 +50,12 @@ public:
     
     bool startsWith(string prefix) {
         Node* node = root;
-        for(int i=0; i<word.length(); ++i){
-            if(!node->containsKey(word[i])){
+        for(int i=0; i<prefix.length(); ++i){
+            if(!node->containsKey(prefix[i])){
                 return false;
             }
-            node = node->get(word[i]);
+            node = node->get(prefix[i]);
         }
         return true;
     }
 };
-
